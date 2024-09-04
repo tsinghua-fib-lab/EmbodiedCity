@@ -9,7 +9,7 @@
 
 [Embodied City](https://embodied-city.fiblab.net) is a platform that supports multiple users completing embodied tasks as drones and vehicles in an open city environment. 
 
-![](simulator.png)
+![](Simulator.png)
 
 
 ##  2. <a name='Simulator'></a> Simulator 🌆
@@ -70,7 +70,7 @@ After you finish using the drone, you should release it to make it available for
 
 In the Embodied City, we define five key embodied tasks that reflect three essential human-like abilities for intelligent agents in an open world: perception, reasoning, and decision-making. For perception, we focus on the task of embodied first-view scene understanding; for reasoning, we address embodied question answering and dialogue; and for decision-making, we include embodied action (visual-language navigation) and embodied task planning. We provide a set of [human-refined image-text datasets](./Datasets) for training and evaluating these embodied tasks.
 
-![Embodied Tasks](./%20Embodied_Tasks.png)
+![Embodied Tasks](./Embodied_Tasks.png)
 
 <!-- #### 4.1 Embodied First-view Scene Understanding
 
