@@ -1,4 +1,4 @@
-# EmbodiedCity# Embodied City
+# Embodied City
 * 1\. [Introduction 🌟](#Introduction)
 * 2\. [Simulator 🌆](#Simulator)
 * 3\. [Usage 🔑](#Usage)
