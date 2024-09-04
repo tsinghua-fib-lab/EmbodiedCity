@@ -1,18 +1,18 @@
 # Embodied City
-* 1\. [Introduction 🌟](#Introduction)
-* 2\. [Simulator 🌆](#Simulator)
-* 3\. [Usage 🔑](#Usage)
-* 4\. [Embodied Tasks 📋 ](#Tasks)
+* 1 [Introduction 🌟](#Introduction)
+* 2 [Simulator 🌆](#Simulator)
+* 3 [Usage 🔑](#Usage)
+* 4 [Embodied Tasks 📋 ](#Tasks)
 
 
-##  1. <a name='Introduction'></a> Introduction 🌟
+##  1 <a name='Introduction'></a> Introduction 🌟
 
 [Embodied City](https://embodied-city.fiblab.net) is a platform that supports multiple users completing embodied tasks as drones and vehicles in an open city environment. 
 
 ![](Simulator.png)
 
 
-##  2. <a name='Simulator'></a> Simulator 🌆
+##  2 <a name='Simulator'></a> Simulator 🌆
 
 We construct an environment where the agents🤖 can perceive, reason, and take actions. The basic environment of the simulator includes a large business district in Beijing, one of the biggest city in China, in which we build 3D model for buildings, streets, and other elements, hosted by [Unreal Engine](https://www.unrealengine.com/).
 #### 2.1 Buildings 
@@ -25,7 +25,7 @@ The streets are modeled to include all necessary components such as lanes🛣️
 Other elements include street furniture🚸 (benches, streetlights, signs) , vegetation🌳 (trees, shrubs, lawns), and urban amenities🚉 (bus stops, metro-entrances, public restrooms). These are also created using Blender, based on real-world references from the street view services mentioned above. Additionally, dynamic elements like vehicles🚗 and pedestrians🚶 are simulated to move realistically within the environment, contributing to the liveliness and accuracy of the urban simulation. The simulation algorithms of vehicles and pedestrians are based on [Mirage Simulation System](https://dl.acm.org/doi/pdf/10.1145/3557915.3560950).
 
 
-##  3. <a name='Usage'></a> Usage 🔑
+##  3 <a name='Usage'></a> Usage 🔑
 We provide A Simple Python SDK to interact with the Embodied City API.
 
 #### 3.1 Sign Up
@@ -65,8 +65,7 @@ image = client.take_picture(ImageType.DepthPlanar, CameraID.FrontCenter)
 ```
 After you finish using the drone, you should release it to make it available for others. You can do this by clicking on the **Release** button in the **Console** page. Here is the detailed [API documentation](./API.py).
 
-##  4. <a name='Tasks'></a> Embodied Tasks 📋 
-
+##  4 <a name='Tasks'></a> Embodied Tasks 📋 
 
 In the Embodied City, we define five key embodied tasks that reflect three essential human-like abilities for intelligent agents in an open world: perception, reasoning, and decision-making. For perception, we focus on the task of embodied first-view scene understanding; for reasoning, we address embodied question answering and dialogue; and for decision-making, we include embodied action (visual-language navigation) and embodied task planning. We provide a set of [human-refined image-text datasets](./Datasets) for training and evaluating these embodied tasks.
 
