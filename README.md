@@ -58,13 +58,13 @@ client.move_back_forth(10)
 ##### Get the RGB image
 ```python
 # Get a RGB image from the front-center camera
-image = client.take_picture(ImageType.Scene, CameraID.FrontCenter)
+image = client.get_image(ImageType.Scene, CameraID.FrontCenter)
 ```
 
 ##### Get the depth image
 ```python
 # Get an image of the depth from the front-center camera
-image = client.take_picture(ImageType.DepthPlanar, CameraID.FrontCenter)
+image = client.get_image(ImageType.DepthPlanar, CameraID.FrontCenter)
 ```
 Here is the detailed [API documentation](./API.py).
 
