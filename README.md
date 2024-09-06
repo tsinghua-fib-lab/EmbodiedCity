@@ -26,21 +26,25 @@ Other elements include street furniture🚸 (benches, streetlights, signs) , veg
 
 
 ##  3 <a name='Usage'></a> Usage 🔑
-We provide A Simple Python SDK to interact with the Embodied City API.
 
-#### 3.1 Sign Up
+We provide [a simple Python SDK](https://github.com/tsinghua-fib-lab/embodied-city-python-sdk) to interact with the Embodied City API. Users can easily achieve perception and control of drone agents through the following functions. When the command is issued via the API, changes in the agent's first-person view will be observed in the **Console**.
+
+#### 3.1 Acquire ID and token
 Before using the SDK, you need to acquire a agent and obtain its token signing up at [Embodied City](https://embodied-city.fiblab.net). In the website, you should go to the **Console** page, choose an available drone, and click on the **Acquire** button.
 
 ❗️The token is a secret key that should not be shared with anyone.
+
 ❗️The token will expire after a certain period of time if you do not use it.
 
 #### 3.2 Installation
+
 ```bash
-pip install embodied-city-python-sdk
+pip install embodiedcity
 ```
 
-#### 3.3 Initialization
-```bash
+#### 3.3 Initialize the client
+
+```python
 from embodiedcity import DroneClient, ImageType, CameraID
 
 base_url = "https://embodied-city.fiblab.net"
@@ -48,54 +52,66 @@ drone_id = "xxx"
 token = "xxxxxxxx"
 client = DroneClient(base_url, drone_id, token)
 ```
-#### 3.4 Basic Control
+#### 3.4 Basic Controls
 
-```bash
-# Move the drone forward by 1 meter
-client.move_back_forth(1)
+##### Move the drone
+```python
+# Move the drone forward by 10 meter (Short movement distance may result in action failure)
+client.move_back_forth(10)
 ```
-```bash
-# Take a picture of the scene
+##### Get the RGB image
+```python
+# Get a RGB image from the front-center camera
 image = client.take_picture(ImageType.Scene, CameraID.FrontCenter)
 ```
 
-```bash
-# Take a picture of the depth
+##### Get the depth image
+```python
+# Get an image of the depth from the front-center camera
 image = client.take_picture(ImageType.DepthPlanar, CameraID.FrontCenter)
 ```
-After you finish using the drone, you should release it to make it available for others. You can do this by clicking on the **Release** button in the **Console** page. Here is the detailed [API documentation](./API.py).
+Here is the detailed [API documentation](./API.py).
+
+#### 3.5 Release the drone
+After you finish using the drone, you should release it to make it available for others. You can do this by clicking on the **Release** button in the **Console** page.
+
+#### FAQ
+
+##### After invoking the control action, the drone did not move.
+
+It is possible that the drone collided with a building. Try issuing a command to move the drone in a direction without obstacles. Alternatively, use the function DroneClient.move_to_position to force it to a specified location.
+
+##### What should I do if I need the drone to perform more complex operations?
+
+Please download and install the full embodiedcity simulator.
 
 ##  4 <a name='Tasks'></a> Embodied Tasks 📋 
 
-In the Embodied City, we define five key embodied tasks that reflect three essential human-like abilities for intelligent agents in an open world: perception, reasoning, and decision-making. For perception, we focus on the task of embodied first-view scene understanding; for reasoning, we address embodied question answering and dialogue; and for decision-making, we include embodied action (visual-language navigation) and embodied task planning. We provide a set of [human-refined image-text datasets](./Datasets) for training and evaluating these embodied tasks.
+In the Embodied City, we define five key embodied tasks that reflect three essential human-like abilities for intelligent agents in an open world: perception, reasoning, and decision-making. For perception, we focus on the task of (1) embodied first-view scene understanding; for reasoning, we address (2) embodied question answering and (3) dialogue; and for decision-making, we include (4) embodied action (visual-language navigation) and (5) embodied task planning. 
 
 ![Embodied Tasks](./Embodied_Tasks.png)
 
-<!-- #### 4.1 Embodied First-view Scene Understanding
 
-The first-view scene understanding requires the agent able to well observe the environment, and give the accurate description, which could considered as a basic ability for the further tasks. We observe from different perspectives at the same location, generating a set of RGB  images, i.e., the input of scene understanding. The output is the textual description for the given scene images.
+#### Installation
 
-#### 4.2 Q&A
+Download and extract the full embodiedcity simulator. 
 
-With the first-view observation, the embodied agent could be further fed with a query posed in natural language about the environment. The ***input*** includes both the first-view RGB images and a query about the environment. The ***output*** should be the direct textual responses to the question. Here we provide three questions:
+```bash
+conda env create -n EmbodiedCity -f environment.yml
+conda activate EmbodiedCity
+```
 
-1. How many traffic lights can be observed around in total?
-2. Is there a building on the left side? What color is it?
-3. Are you facing the road, the building, or the greenery?
+or
 
-#### 4.3 Dialogue
+```bash
+conda create -n EmbodiedCity python=3.10
+conda activate EmbodiedCity
+pip install -r requirements.txt
+```
 
-Embodied dialogue involves ongoing interactions where the agent engages in a back-and-forth conversation with the user。 This requires maintaining context and understanding the flow of dialogue. Therefore, the ***input*** includes embodied observations and multi-round queries, and the ***output*** is the multi-round responses. Here we provide three dialogues:
-1. May I ask if there are any prominent waypoints around? **->** Where are they located respectively?
-2. May I ask what color the building on the left is? **->** Where is it located relative to the road ahead?
-3. How many trees are there in the rear view? **->** What colors are they respectively?
+## Running
 
-#### 4.4 Embodied Action (VLN)
-Embodied Action, often referred to as Vision-and-Language Navigation (VLN), is a research area in artificial intelligence that focuses on enabling an agent to navigate an environment based on natural language instructions. The input combines visual perception and natural language instructions to guide the agent through complex environments. The output is the action sequences following the language instructions.
+The embodied vision-language navigation (VLN) task example lies in [embodied_vln.py](./embodied_vln.py). Correspondint dataset is in [Datasets/vln/start_loc.txt](./Datasets/vln/start_loc.txt) and [Datasets/vln/label](./Datasets/vln/label).
 
-#### 4.5 Task Planning
-The decision-making in the real world does not have explicit instructions; otherwise, there is only a task goal. It is significant for the embodied agents to be able to compose the complex and long-term task goals into several sub-tasks, which we refer to as embodied task planning. The ***input*** is the first-view observations and a given natural language described task goal, and the ***output*** should be a series of sub-tasks that the agent plans to execute. Here we provide three tasks and 
+If you would like to perform the tasks of embodied first-view scene understanding, question answering, dialogue, and task planning, please see the examples in 'embodied_tasks.py'. Corresponding dataset is in [Datasets/Imgs'](./Datasets/Imgs) and  [Datasets/Imgs_label](./Datasets/Imgs_label)
 
-1. I want to have a cup of coffee at ALL-Star coffee shop, but I have not brought any money. What should I do? Please give a chain-like plan.
-2. I need to get an emergency medicine from the pharmacy, but I do not know the way. What should I do? Please give a chain-like plan.
-3. I lost my wallet nearby, and now I need to find it. What should I do? Please give a chain-like plan. -->
