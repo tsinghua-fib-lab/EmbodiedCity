@@ -1,8 +1,4 @@
 # Embodied City
-[1 Introduction 🌟](#Introduction)
-[2 Simulator 🌆](#Simulator)
-[3 Usage 🔑](#Usage)
-[4 Embodied Tasks 📋 ](#Tasks)
 
 
 ##  1 <a name='Introduction'></a> Introduction 🌟
