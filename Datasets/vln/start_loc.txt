@@ -1,0 +1,101 @@
+0. 650150.258149, -419969.413753, 131.595741; 旋转: 0, 0, 180; Under the traffic light beads across the street
+1. 650150.258149, -419969.413753, 131.595741; 旋转: 0, 0, 180; Under the red tree
+2. 650150.258149, -419969.413753, 131.595741; 旋转: 0, 0, 180; Cross the road along the right zebra crossing
+3. 650150.258149, -419969.413753, 131.595741; 旋转: 0, 0, 180; Go to Right front red building
+4. 650150.258149, -419969.413753, 131.595741; 旋转: 0, 0, 180; Following the zebra crossing, cross the road twice to the opposite side diagonally
+5. 650150.258149, -419969.413753, 131.595741; 旋转: 0, 0, 180; Go to left front red building
+6. 650150.258149, -419969.413753, 131.595741; 旋转: 0, 0, 180; Keep walking until you see the bus stop
+7. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find the first shop 
+8. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find the a bicycle
+9. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Fly to the air conditioner on the second floor of the right building
+10. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Fly to the air conditioner on the third floor of the right building
+11. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Fly to the air conditioner on the fourth floor of the right building
+12. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find the shop with yellow billboard.
+13. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find the second shop.
+14. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find the shop named '酒便利'.
+15. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find a destbin.
+16. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find a yellow electric bike.
+17. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find a brown electric bike.
+18. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find a green electric bike.
+19. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and arrive on the stairs to the first shop
+20. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find the third shop.
+21. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Go ahead and find the shop named 'ALL-STAR'.
+22. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Walk forward and find the table in front of the third shop
+23. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Walk forward and find the sunshade umbrella in front of the 'ALL-STAR' cafe
+24. 644350.258149, -420539.413753, 131.595741; 旋转: 0, 0, 180; Fly to the rooftop of the red building on the right
+25. 644350.258149, -419969.413753, 131.595741; 旋转: 0, 0, 180; Fly to the rooftop of the red building on the right
+26. 645760.258149, -419639.413753, 131.595741; 旋转: 0, 0, 180; Fly to the rooftop of the red building on the right
+27. 645760.258149, -419639.413753, 131.595741; 旋转: 0, 0, 180; Keep playing and walking forward until you see the iron gate
+28. 645760.258149, -419639.413753, 131.595741; 旋转: 0, 0, 180; Walk to the entrance of "中国海关" on the opposite street
+29. 644780.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; Walk to the entrance of "中国海关" on the opposite street
+30. 641830.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; Walk to the entrance of "中国海关" on the opposite street
+31. 639890.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; Walk to the entrance of "中国海关" on the opposite street
+32. 637510.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; The iron gate on the right side
+33. 637510.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; Fly to the rooftop of the white building on your right
+34. 637510.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; Move to the right front substation box
+35. 637510.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; Move to the table at the rear right
+36. 637510.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; Move to the street light in front of you on the right
+37. 637510.258149, -420439.413753, 131.595741; 旋转: 0, 0, 180; Move to the second street light in front of you on the right
+38. 635040.258149, -420259.413753, 1071.595741; 旋转: 0, 0, 270; Moving in front of the red billboard on the third floor
+39. 649319.295351, -446963.560393, 3145.703472; 旋转: 0, 0, 0; Move clockwise around the building once
+40. 649319.295351, -446963.560393, 3145.703472; 旋转: 0, 0, 0; Move counterclockwise around the building once
+41. 639230.0, -472980.0, 3220.0; 旋转: 0, 0, 0; Move clockwise around the building, which is on your left
+42. 639230.0, -472980.0, 3220.0; 旋转: 0, 0, 0; Move to the opposite side of the building, which is on your left
+43. 639230.0, -472980.0, 3220.0; 旋转: 0, 0, 0; Fly to the rooftop of the building, which is on your left
+44. 634260.0, -480250.0, 30.0; 旋转: 0, 0, 0; Move clockwise around the building, which is on your left
+45. 634260.0, -480250.0, 30.0; 旋转: 0, 0, 0; Move to the opposite side of the building, which is on your left
+46. 634260.0, -480250.0, 30.0; 旋转: 0, 0, 0; Fly to the rooftop of the building, which is on your left
+47. 634260.0, -480250.0, 30.0; 旋转: 0, 0, 0; Move to the tree on your right
+48. 619133.561402, -526475.39262, 743.598747; 旋转: 0, 0, 0; Move to the gray building on you front left
+49. 619133.561402, -526475.39262, 743.598747; 旋转: 0, 0, 0; Move to the building with glass surface on you front right.
+50. 619133.561402, -526475.39262, 743.598747; 旋转: 0, 0, 0; Move to the gray building on you back right.
+51. 609521.115281, -520411.189398, 498.403824; 旋转: 0, 0, 0; Move to the front door of the gray building on you front right.
+52. 609521.115281, -520411.189398, 498.403824; 旋转: 0, 0, 0; Move to the gray and white building on your right side.
+53. 609521.115281, -520411.189398, 498.403824; 旋转: 0, 0, 0; Move to the front door of the gray and white building on you front right.
+54. 609521.115281, -520411.189398, 498.403824; 旋转: 0, 0, 0; Move to the dark and brown building on you back right.
+55. 561639.919262, -430462.680677, 813.592191; 旋转: 0, 0, 0; Move to the brown building and land on its roof.
+56. 561639.919262, -430462.680677, 813.592191; 旋转: 0, 0, 0; Move to the dark gray building on your right.
+57. 561639.919262, -430462.680677, 813.592191; 旋转: 0, 0, 0; Move to the geometric building with glass surface on your left.
+58. 562019.173207, -541354.680269, 2107.326445; 旋转: 0, 0, 0; Move to the front door of the building in front of you.
+59. 614969.999998, -417910.00014, 92.000087; 旋转: 0, 0, 0; Move to the building with a blue billboard.
+60. 614969.999998, -417910.00014, 92.000087; 旋转: 0, 0, 0; Move to the building with a white billboard.
+61. 614969.999998, -417910.00014, 92.000087; 旋转: 0, 0, 0; Move to the dark tall building behind of you.
+62. 614969.999998, -417910.00014, 92.000087; 旋转: 0, 0, 0; Move to '中国海关' behind the building with a blue billboard.
+63. 614969.999998, -417910.00014, 92.000087; 旋转: 0, 0, 0; Move to residential building in the front and fly to the window with '家电维修' sign.
+64. 625579.999998, -418700.00014, 342.000087; 旋转: 0, 0, 0; Move along the road and reach the bus stop on the left side of the road.
+65. 625579.999998, -418700.00014, 342.000087; 旋转: 0, 0, 0; Move along the road and reach the 'CENTRAL ALL-STAR' store in the residential building.
+66. 625579.999998, -418700.00014, 342.000087; 旋转: 0, 0, 0; Move along the road. Pass the 'CENTRAL ALL-STAR' store and reach the 'Cheesspod' in the residential building.
+67. 635950.0, -427300.0, 122.0; 旋转: 0, 0, 0; Move to the '中国海关' building on your right.
+68. 635950.0, -427300.0, 122.0; 旋转: 0, 0, 0; Move to the first blue building in front of you.
+69. 635950.0, -427300.0, 122.0; 旋转: 0, 0, 0; Fly to the bus stop near the road.
+70. 635950.0, -427300.0, 122.0; 旋转: 0, 0, 0; Fly to the front door of '酒便利'.
+71. 532830.0, -359520.0, 4902.0; 旋转: 0, 0, 180; Fly to the top of the building with '北京烟草' sign, and land on the its roof.
+72. 532830.0, -359520.0, 4902.0; 旋转: 0, 0, -90; Fly to the top of the building with '北京烟草' sign, and land on the its roof.
+73. 721310.0, -358830.0, 92.0; 旋转: 0, 0, 180; Move to the brown building in front of you and land next to the red tree.
+74. 713780.000004, -419339.999714, 92.000179; 旋转: 0, 0, 0; Move to the pink tree on your right.
+75. 721310.0, -358830.0, 92.0; 旋转: 0, 0, 180; Fly up and land on the roof of the blue building on your left.
+76. 713780.000004, -419339.999714, 92.000179; 旋转: 0, 0, 0; Move to traffic light on left side of the road.
+77. 712200.0, -414390.0, 2362.0; 旋转: 0, 0, 90; Move to the pink tree in the front.
+78. 712200.0, -414390.0, 2362.0; 旋转: 0, 0, 90; Move to the pink house on your left.
+79. 712200.0, -414390.0, 2362.0; 旋转: 0, 0, 90; Move to the dark gray building behind the pink house.
+80. 728910.0, -391460.0, 92.0; 旋转: 0, 0, 0; Fly along the road and reach the traffic light on right side of the intersection.
+81. 647819.999846, -418209.999915, 92.000147; 旋转: 0, 0, 0; Move to the door of the blue building which is near the pink tree.
+82. 684080.0, -524520.0, 92.0; 旋转: 0, 0, 180; Move to the gray building in front of you.
+83. 684080.0, -524520.0, 92.0; 旋转: 0, 0, 0; Move to the center of the twin buildings in front of you and land.
+84. 684080.0, -524520.0, 92.0; 旋转: 0, 0, 0; Turn right and move along the road. Stop at the first crossroad.
+85. 684080.0, -524520.0, 92.0; 旋转: 0, 0, 0; Fly to the top of the right blue building and land on its roof.
+86. 652900.0, -542290.0, 142.0; 旋转: 0, 0, 180; Fly to the nearest door of the front gray building.
+87. 602110.0, -542500.0, 92.0; 旋转: 0, 0, 90; Fly to the lowest platform of the glass-surface building in front of you.
+88. 606030.0, -513400.0, 92.0; 旋转: 0, 0, -135; Fly to the lowest platform of the glass-surface building in front of you.
+89. 606030.0, -513400.0, 92.0; 旋转: 0, 0, 135; Fly to the lowest platform of the brown and white building in front of you.
+90. 606030.0, -523070.0, 1252.0; 旋转: 0, 0, 0; Fly to the gray platform of the dark building in front of you and land on it.
+91. 623220.0, -523320.0, 92.0; 旋转: 0, 0, 180; Fly to the gray platform of the dark building in front of you and land on it.
+92. 644060.0, -480669.999996, 92.0; 旋转: 0, 0, 0; Fly to the platform of the hump shaped, blue building in front of you and land on it.
+93. 644060.0, -480669.999996, 92.0; 旋转: 0, 0, -90; Move to the front door of the brown building in the front left.
+94. 647220.0, -488269.999996, 92.0; 旋转: 0, 0, 180; Move to the front door of the brown building on your front.
+95. 673450.0, -486349.999996, 92.0; 旋转: 0, 0, 180; Fly to the roof of the gray building ahead and land on it.
+96. 673450.0, -486349.999996, 92.0; 旋转: 0, 0, 180; Fly to the platform of the hump shaped, blue building in front of you and land on it.
+97. 678519.571819, -460869.419117, 92.000152; 旋转: 0, 0, 0; Move to the front door of the glass-surface building in front of you.
+98. 678519.571819, -460869.419117, 92.000152; 旋转: 0, 0, 0; Fly to roof of the long white buiding on your left and land on it.
+99. 678519.571819, -460869.419117, 92.000152; 旋转: 0, 0, 0; Turn right, and move to door of the blue buiding.
+100. 678519.571819, -460869.419117, 92.000152; 旋转: 0, 0, 90; Fly to roof of the long blue buiding on your front left and land on it.
