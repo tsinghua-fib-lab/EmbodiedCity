@@ -1,8 +1,8 @@
 # Embodied City
-* 1 [Introduction 🌟](#Introduction)
-* 2 [Simulator 🌆](#Simulator)
-* 3 [Usage 🔑](#Usage)
-* 4 [Embodied Tasks 📋 ](#Tasks)
+[1 Introduction 🌟](#Introduction)
+[2 Simulator 🌆](#Simulator)
+[3 Usage 🔑](#Usage)
+[4 Embodied Tasks 📋 ](#Tasks)
 
 
 ##  1 <a name='Introduction'></a> Introduction 🌟
@@ -75,7 +75,7 @@ Here is the detailed [API documentation](./API.py).
 #### 3.5 Release the drone
 After you finish using the drone, you should release it to make it available for others. You can do this by clicking on the **Release** button in the **Console** page.
 
-#### FAQ
+#### 3.6 FAQ
 
 ##### After invoking the control action, the drone did not move.
 
@@ -92,7 +92,7 @@ In the Embodied City, we define five key embodied tasks that reflect three essen
 ![Embodied Tasks](./Embodied_Tasks.png)
 
 
-#### Installation
+#### 4.1 Environment
 
 Download and extract the full embodiedcity simulator. 
 
@@ -109,7 +109,7 @@ conda activate EmbodiedCity
 pip install -r requirements.txt
 ```
 
-## Running
+#### 4.2 Running
 
 The embodied vision-language navigation (VLN) task example lies in [embodied_vln.py](./embodied_vln.py). Correspondint dataset is in [Datasets/vln/start_loc.txt](./Datasets/vln/start_loc.txt) and [Datasets/vln/label](./Datasets/vln/label).
 
