@@ -133,11 +133,11 @@ Embodied dialogue involves ongoing interactions where the agent engages in a bac
 * May I ask what color the building on the left is? **->** Where is it located relative to the road ahead?
 * How many trees are there in the rear view? **->** What colors are they respectively?
 
-##### 4.4 Embodied Action (VLN)
+##### 4.3.4 Embodied Action (VLN)
 
 Embodied Action, often referred to as Vision-and-Language Navigation (VLN), is a research area in artificial intelligence that focuses on enabling an agent to navigate an environment based on natural language instructions. The **input** combines visual perception and natural language instructions to guide the agent through complex environments. The **output** is the action sequences following the language instructions.
 
-##### 4.5 Embodied Task Planning
+##### 4.3.5 Embodied Task Planning
 The decision-making in the real world does not have explicit instructions; otherwise, there is only a task goal. It is significant for the embodied agents to be able to compose the complex and long-term task goals into several sub-tasks, which we refer to as embodied task planning. The **input** is the first-view observations and a given natural language described task goal, and the **output** should be a series of sub-tasks that the agent plans to execute. Here we provide three tasks:
 
 * I want to have a cup of coffee at ALL-Star coffee shop, but I have not brought any money. What should I do? Please give a chain-like plan.
