@@ -111,3 +111,35 @@ The embodied vision-language navigation (VLN) task example lies in [embodied_vln
 
 If you would like to perform the tasks of embodied first-view scene understanding, question answering, dialogue, and task planning, please see the examples in 'embodied_tasks.py'. Corresponding dataset is in [Datasets/Imgs'](./Datasets/Imgs) and  [Datasets/Imgs_label](./Datasets/Imgs_label)
 
+#### 4.3 Task Definition
+
+##### 4.3.1 Embodied First-view Scene Understanding
+
+The first-view scene understanding requires the agent able to well observe the environment, and give the accurate description, which could considered as a basic ability for the further tasks. We observe from different perspectives at the same location, generating a set of RGB  images as the **input** of scene understanding. The **output** is the textual description for the given scene images.
+
+##### 4.3.2 Embodied Question Answering
+
+With the first-view observation, the embodied agent could be further fed with a query posed in natural language about the environment. The **input** includes both the first-view RGB images and a query about the environment. The **output** should be the direct textual responses to the question. Here we provide three questions:
+
+* How many traffic lights can be observed around in total?
+* Is there a building on the left side? What color is it?
+* Are you facing the road, the building, or the greenery?
+
+##### 4.3.3 Embodied Dialogue
+
+Embodied dialogue involves ongoing interactions where the agent engages in a back-and-forth conversation with the user。 This requires maintaining context and understanding the flow of dialogue. Therefore, the **input** includes embodied observations and multi-round queries, and the **output** is the multi-round responses. Here we provide three dialogues:
+
+* May I ask if there are any prominent waypoints around? **->** Where are they located respectively?
+* May I ask what color the building on the left is? **->** Where is it located relative to the road ahead?
+* How many trees are there in the rear view? **->** What colors are they respectively?
+
+##### 4.4 Embodied Action (VLN)
+
+Embodied Action, often referred to as Vision-and-Language Navigation (VLN), is a research area in artificial intelligence that focuses on enabling an agent to navigate an environment based on natural language instructions. The **input** combines visual perception and natural language instructions to guide the agent through complex environments. The **output** is the action sequences following the language instructions.
+
+##### 4.5 Embodied Task Planning
+The decision-making in the real world does not have explicit instructions; otherwise, there is only a task goal. It is significant for the embodied agents to be able to compose the complex and long-term task goals into several sub-tasks, which we refer to as embodied task planning. The **input** is the first-view observations and a given natural language described task goal, and the **output** should be a series of sub-tasks that the agent plans to execute. Here we provide three tasks and 
+
+* I want to have a cup of coffee at ALL-Star coffee shop, but I have not brought any money. What should I do? Please give a chain-like plan.
+* I need to get an emergency medicine from the pharmacy, but I do not know the way. What should I do? Please give a chain-like plan.
+* I lost my wallet nearby, and now I need to find it. What should I do? Please give a chain-like plan.
