@@ -107,9 +107,58 @@ pip install -r requirements.txt
 
 #### 4.2 Running
 
-The embodied vision-language navigation (VLN) task example lies in [embodied_vln.py](./embodied_vln.py). Correspondint dataset is in [Datasets/vln/start_loc.txt](./Datasets/vln/start_loc.txt) and [Datasets/vln/label](./Datasets/vln/label).
+##### 4.2.1 Embodied Vision-Language Navigation Task
+
+This repository provides an example of a Vision-Language Navigation (VLN) task implementation. Below, you'll find instructions on how to set up and run the VLN evaluation using our provided datasets and models.
+
+###### Files and Directories
+
+- **Code**: The main code for the VLN task is located in [embodied_vln.py](./embodied_vln.py).
+- **Dataset**: The corresponding dataset files are located in:
+  - [Datasets/vln/start_loc.txt](./Datasets/vln/start_loc.txt) - Defines the starting locations and instructions for each VLN task sample.
+  - [Datasets/vln/label](./Datasets/vln/label) - Contains the ground truth trajectories.
+
+###### Example Usage
+
+In `embodied_vln.py`, the `VLN_evaluator` class is defined. To use it, you need to provide the dataset path, the model to be evaluated, and the corresponding API key.
+
+1. **Set up model and API key:**
+
+    ```python
+    model = "xxxxx"  # LM models, e.g., "claude-3-haiku-20240307", "gpt-4o"
+    api_key = "xxxxxxxxx"  # Fill in your API key
+    ```
+
+2. **Initialize the VLN Evaluator:**
+
+    ```python
+    vln_eval = VLN_evaluator("dataset/vln", model, api_key)
+    ```
+
+3. **Run the Evaluation:**
+
+    ```python
+    vln_eval.evaluation()
+    ```
+
+Currently, we support multimodal models from OpenAI and Claude. If you wish to use a custom model, you can modify the `LM_VLN` class in `utils.py`.
+
+
+The evaluation process will activate the simulator's drone, running through each VLN task sample. The performance of the model will be quantified using the following metrics:
+- **Success Rate (SR)**
+- **SPL (Success weighted by Path Length)**
+- **Navigation Error (NE)**
+
+###### Dataset Details
+
+- **`start_loc.txt`**: Contains the starting location and instruction for each sample.
+- **`label`**: Contains the ground truth trajectory for each sample.
+
+
+##### 4.2.2 Other tasks
 
 If you would like to perform the tasks of embodied first-view scene understanding, question answering, dialogue, and task planning, please see the examples in 'embodied_tasks.py'. Corresponding dataset is in [Datasets/Imgs'](./Datasets/Imgs) and  [Datasets/Imgs_label](./Datasets/Imgs_label)
+
 
 #### 4.3 Task Definition
 
