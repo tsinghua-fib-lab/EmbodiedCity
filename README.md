@@ -152,7 +152,43 @@ The evaluation process will activate the simulator's drone, running through each
 
 ##### 4.2.2 Other tasks
 
-If you would like to perform the tasks of embodied first-view scene understanding, question answering, dialogue, and task planning, please see the examples in 'embodied_tasks.py'. Corresponding dataset is in [Datasets/Imgs'](./Datasets/Imgs) and  [Datasets/Imgs_label](./Datasets/Imgs_label)
+If you would like to perform the tasks of embodied first-view scene understanding, question answering, dialogue, and task planning, please see the examples in 'embodied_tasks.py'. Corresponding dataset is in [Datasets/Imgs'](./Datasets/Imgs) and  [Datasets/Imgs_label](./Datasets/Imgs_label).
+
+In the `embodied_tasks.py` file, you should first define the queries you want to evaluate and place them into the `query_dict` dictionary. Here are examples for different tasks:
+
+- **Embodied First-view Scene Understanding**: `query_dict['scene']`
+- **Embodied Question Answering**: `query_dict['qa1']`, `query_dict['qa2']`, `query_dict['qa3']`
+- **Embodied Dialogue**: `query_dict['dialog1']`, `query_dict['dialog2']`, `query_dict['dialog3']`
+- **Embodied Task Planning**: `query_dict['tp1']`, `query_dict['tp2']`
+
+Initialize the Model: You need to specify the model and the corresponding API key. Supported models include multimodal models from OpenAI, Claude, and Qwen.
+
+```python
+model = "xxxxx"  # LM models, e.g., "claude-3-haiku-20240307", "gpt-4o"
+api_key = "xxxxxxxxx"  # Fill in API key
+```
+
+Initialize the EmbodiedTasks Class:
+
+```python
+embodied_tasks = EmbodiedTasks(query_dict, model, api_key)
+```
+
+Run the Tasks: The results of the model's performance will be saved in the `./results/` folder, named as `task_type_model_name.csv`.
+
+```python
+embodied_tasks.run()
+```
+
+Evaluate the Model: You can evaluate the model's performance using:
+
+```python
+embodied_tasks.evaluate()
+```
+
+This will provide quantitative metrics including BLEU-1, BLEU-2, BLEU-3, BLEU-4, ROUGE, METEOR, and CIDEr.
+
+Besides, RGB observations are stored offline in the `./Datasets/Imgs` folder for convenience. Labels for different tasks are stored in `./Datasets/Imgs_label`.
 
 
 #### 4.3 Task Definition
