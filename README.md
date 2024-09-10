@@ -111,48 +111,43 @@ pip install -r requirements.txt
 
 This repository provides an example of a Vision-Language Navigation (VLN) task implementation. Below, you'll find instructions on how to set up and run the VLN evaluation using our provided datasets and models.
 
-###### Files and Directories
+**Files and Directories:**
 
 - **Code**: The main code for the VLN task is located in [embodied_vln.py](./embodied_vln.py).
 - **Dataset**: The corresponding dataset files are located in:
   - [Datasets/vln/start_loc.txt](./Datasets/vln/start_loc.txt) - Defines the starting locations and instructions for each VLN task sample.
   - [Datasets/vln/label](./Datasets/vln/label) - Contains the ground truth trajectories.
 
-###### Example Usage
+**Example Usage:**
 
 In `embodied_vln.py`, the `VLN_evaluator` class is defined. To use it, you need to provide the dataset path, the model to be evaluated, and the corresponding API key.
 
-1. **Set up model and API key:**
+First, set up model and API key:
 
-    ```python
-    model = "xxxxx"  # LM models, e.g., "claude-3-haiku-20240307", "gpt-4o"
-    api_key = "xxxxxxxxx"  # Fill in your API key
-    ```
+```python
+model = "xxxxx"  # LM models, e.g., "claude-3-haiku-20240307", "gpt-4o"
+api_key = "xxxxxxxxx"  # Fill in your API key
+```
 
-2. **Initialize the VLN Evaluator:**
+Second, initialize the VLN evaluator:
 
-    ```python
-    vln_eval = VLN_evaluator("dataset/vln", model, api_key)
-    ```
+```python
+vln_eval = VLN_evaluator("dataset/vln", model, api_key)
+```
 
-3. **Run the Evaluation:**
+Third, run the evaluation:
 
-    ```python
-    vln_eval.evaluation()
-    ```
+```python
+vln_eval.evaluation()
+```
 
 Currently, we support multimodal models from OpenAI and Claude. If you wish to use a custom model, you can modify the `LM_VLN` class in `utils.py`.
 
 
 The evaluation process will activate the simulator's drone, running through each VLN task sample. The performance of the model will be quantified using the following metrics:
-- **Success Rate (SR)**
-- **SPL (Success weighted by Path Length)**
-- **Navigation Error (NE)**
-
-###### Dataset Details
-
-- **`start_loc.txt`**: Contains the starting location and instruction for each sample.
-- **`label`**: Contains the ground truth trajectory for each sample.
+- **Success Rate (SR)** measures the proportion of navigation episodes where the agent successfully reaches the target location within a specified margin of error
+- **SPL (Success weighted by Path Length)** is a metric that considers both the success rate and the efficiency of the path taken by the agent. It accounts for how closely the agent's path length matches the optimal path length.
+- **Navigation Error (NE)** measures the average distance from the agent's final location to the target destination.
 
 
 ##### 4.2.2 Other tasks
