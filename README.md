@@ -50,18 +50,18 @@ client = DroneClient(base_url, drone_id, token)
 ```
 #### 3.4 Basic Controls
 
-##### Move the drone
+###### Move the drone
 ```python
 # Move the drone forward by 10 meter (Short movement distance may result in action failure)
 client.move_back_forth(10)
 ```
-##### Get the RGB image
+###### Get the RGB image
 ```python
 # Get a RGB image from the front-center camera
 image = client.get_image(ImageType.Scene, CameraID.FrontCenter)
 ```
 
-##### Get the depth image
+###### Get the depth image
 ```python
 # Get an image of the depth from the front-center camera
 image = client.get_image(ImageType.DepthPlanar, CameraID.FrontCenter)
@@ -73,11 +73,11 @@ After you finish using the drone, you should release it to make it available for
 
 #### 3.6 FAQ
 
-##### After invoking the control action, the drone did not move.
+###### After invoking the control action, the drone did not move.
 
 It is possible that the drone collided with a building. Try issuing a command to move the drone in a direction without obstacles. Alternatively, use the function DroneClient.move_to_position to force it to a specified location.
 
-##### What should I do if I need the drone to perform more complex operations?
+###### What should I do if I need the drone to perform more complex operations?
 
 Please download and install the full embodiedcity simulator.
 
@@ -107,44 +107,44 @@ pip install -r requirements.txt
 
 #### 4.2 Running
 
-##### 4.2.1 Embodied Vision-Language Navigation Task
+##### 4.2.1 Embodied Vision-Language Navigation
 
-This repository provides an example of a Vision-Language Navigation (VLN) task implementation. Below, you'll find instructions on how to set up and run the VLN evaluation using our provided datasets and models.
+We provides an example of a Vision-Language Navigation (VLN) task implementation. 
 
-**Files and Directories:**
+**Files and Directories**
 
 - **Code**: The main code for the VLN task is located in [embodied_vln.py](./embodied_vln.py).
 - **Dataset**: The corresponding dataset files are located in:
   - [Datasets/vln/start_loc.txt](./Datasets/vln/start_loc.txt) - Defines the starting locations and instructions for each VLN task sample.
   - [Datasets/vln/label](./Datasets/vln/label) - Contains the ground truth trajectories.
 
-**Example Usage:**
+**Usage**
 
-In `embodied_vln.py`, the `VLN_evaluator` class is defined. To use it, you need to provide the dataset path, the model to be evaluated, and the corresponding API key.
+In `embodied_vln.py`, the `VLN_evaluator` class is defined. You need to provide the dataset path, the model to be evaluated, and the corresponding API key.
 
-First, set up model and API key:
+###### Set up model and API key:
 
 ```python
 model = "xxxxx"  # LM models, e.g., "claude-3-haiku-20240307", "gpt-4o"
 api_key = "xxxxxxxxx"  # Fill in your API key
 ```
 
-Second, initialize the VLN evaluator:
+###### Initialize the VLN evaluator:
 
 ```python
 vln_eval = VLN_evaluator("dataset/vln", model, api_key)
 ```
 
-Third, run the evaluation:
+###### Run the evaluation:
 
 ```python
 vln_eval.evaluation()
 ```
 
-Currently, we support multimodal models from OpenAI and Claude. If you wish to use a custom model, you can modify the `LM_VLN` class in `utils.py`.
+We support multimodal models from OpenAI and Claude. If you wish to use a custom model, you can modify the `LM_VLN` class in `utils.py`.
 
 
-The evaluation process will activate the simulator's drone, running through each VLN task sample. The performance of the model will be quantified using the following metrics:
+The evaluation process will activate the simulator's drone, running through each VLN task sample. The performance of the model will be quantified using the following three metrics:
 - **Success Rate (SR)** measures the proportion of navigation episodes where the agent successfully reaches the target location within a specified margin of error
 - **SPL (Success weighted by Path Length)** is a metric that considers both the success rate and the efficiency of the path taken by the agent. It accounts for how closely the agent's path length matches the optimal path length.
 - **Navigation Error (NE)** measures the average distance from the agent's final location to the target destination.
@@ -152,41 +152,44 @@ The evaluation process will activate the simulator's drone, running through each
 
 ##### 4.2.2 Other tasks
 
-If you would like to perform the tasks of embodied first-view scene understanding, question answering, dialogue, and task planning, please see the examples in 'embodied_tasks.py'. Corresponding dataset is in [Datasets/Imgs'](./Datasets/Imgs) and  [Datasets/Imgs_label](./Datasets/Imgs_label).
+If you would like to perform the tasks of embodied first-view scene understanding, question answering, dialogue, and task planning, please see the examples in [embodied_tasks.py](./embodied_tasks.py). Corresponding dataset is in [Datasets/Imgs](./Datasets/Imgs) and  [Datasets/Imgs_label](./Datasets/Imgs_label).
 
 In the `embodied_tasks.py` file, you should first define the queries you want to evaluate and place them into the `query_dict` dictionary. Here are examples for different tasks:
 
-- **Embodied First-view Scene Understanding**: `query_dict['scene']`
-- **Embodied Question Answering**: `query_dict['qa1']`, `query_dict['qa2']`, `query_dict['qa3']`
-- **Embodied Dialogue**: `query_dict['dialog1']`, `query_dict['dialog2']`, `query_dict['dialog3']`
-- **Embodied Task Planning**: `query_dict['tp1']`, `query_dict['tp2']`
+- *Embodied First-view Scene Understanding*: `query_dict['scene']`
+- *Embodied Question Answering*: `query_dict['qa1']`, `query_dict['qa2']`, `query_dict['qa3']`
+- *Embodied Dialogue*: `query_dict['dialog1']`, `query_dict['dialog2']`, `query_dict['dialog3']`
+- *Embodied Task Planning*: `query_dict['tp1']`, `query_dict['tp2']`
 
-Initialize the Model: You need to specify the model and the corresponding API key. Supported models include multimodal models from OpenAI, Claude, and Qwen.
+###### Initialize the model
 
 ```python
+# You need to specify the model and the corresponding API key. Supported models include multimodal models from OpenAI, Claude, and Qwen.
 model = "xxxxx"  # LM models, e.g., "claude-3-haiku-20240307", "gpt-4o"
 api_key = "xxxxxxxxx"  # Fill in API key
 ```
 
-Initialize the EmbodiedTasks Class:
+###### Initialize the *EmbodiedTasks* Class:
 
 ```python
 embodied_tasks = EmbodiedTasks(query_dict, model, api_key)
 ```
 
-Run the Tasks: The results of the model's performance will be saved in the `./results/` folder, named as `task_type_model_name.csv`.
+###### Run the tasks
 
 ```python
+# The results of the model's performance will be saved in the `./results/` folder, named as `task_type_model_name.csv`.
 embodied_tasks.run()
 ```
 
-Evaluate the Model: You can evaluate the model's performance using:
+###### Evaluate the model
 
 ```python
+# You can evaluate the model's performance using
 embodied_tasks.evaluate()
 ```
 
-This will provide quantitative metrics including BLEU-1, BLEU-2, BLEU-3, BLEU-4, ROUGE, METEOR, and CIDEr.
+This will provide quantitative metrics including *BLEU-1, BLEU-2, BLEU-3, BLEU-4, ROUGE, METEOR,* and *CIDEr*.
 
 Besides, RGB observations are stored offline in the `./Datasets/Imgs` folder for convenience. Labels for different tasks are stored in `./Datasets/Imgs_label`.
 
@@ -213,7 +216,7 @@ Embodied dialogue involves ongoing interactions where the agent engages in a bac
 * May I ask what color the building on the left is? **->** Where is it located relative to the road ahead?
 * How many trees are there in the rear view? **->** What colors are they respectively?
 
-##### 4.3.4 Embodied Action (VLN)
+##### 4.3.4 Embodied Action (Vision-and-Language Navigation)
 
 Embodied Action, often referred to as Vision-and-Language Navigation (VLN), is a research area in artificial intelligence that focuses on enabling an agent to navigate an environment based on natural language instructions. The **input** combines visual perception and natural language instructions to guide the agent through complex environments. The **output** is the action sequences following the language instructions.
 
