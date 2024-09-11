@@ -3,7 +3,7 @@
 
 ##  1 <a name='Introduction'></a> Introduction 🌟
 
-[Embodied City](https://embodied-city.fiblab.net) is a platform that supports multiple users completing embodied tasks as drones and vehicles in an open city environment. 
+Embodied intelligence is considered one of the most promising directions for artificial general intelligence, with human-like abilities interacting with the world. However, most works focus on bounded indoor environments, with limited literature on open-world scenarios. To address this, we release a new benchmark platform, named [Embodied City](https://embodied-city.fiblab.net), for embodied intelligence in urban environments. This platform includes a simulator and datasets on representative tasks for embodied intelligence in an urban environment. You can either request the API key to access the online deployed environment, or download it to deploy in your own server.
 
 ![](Simulator.png)
 
@@ -73,17 +73,17 @@ After you finish using the drone, you should release it to make it available for
 
 #### 3.6 FAQ
 
-###### After invoking the control action, the drone did not move.
+##### After invoking the control action, the drone did not move.
 
 It is possible that the drone collided with a building. Try issuing a command to move the drone in a direction without obstacles. Alternatively, use the function DroneClient.move_to_position to force it to a specified location.
 
-###### What should I do if I need the drone to perform more complex operations?
+##### What should I do if I need the drone to perform more complex operations?
 
 Please download and install the full embodiedcity simulator.
 
 ##  4 <a name='Tasks'></a> Embodied Tasks 📋 
 
-In the Embodied City, we define five key embodied tasks that reflect three essential human-like abilities for intelligent agents in an open world: perception, reasoning, and decision-making. For perception, we focus on the task of (1) embodied first-view scene understanding; for reasoning, we address (2) embodied question answering and (3) dialogue; and for decision-making, we include (4) embodied action (visual-language navigation) and (5) embodied task planning. 
+In the Embodied City, we define five key embodied tasks that reflect three essential human-like abilities for intelligent agents in an open world: perception, reasoning, and decision-making. For perception, we focus on the task of [embodied first-view scene understanding](#431-embodied-first-view-scene-understanding); for reasoning, we address [embodied question answering](#432-embodied-question-answering) and [dialogue](#433-embodied-dialogue); and for decision-making, we include [embodied action (visual-language navigation)](#434-embodied-action-vision-and-language-navigation) and [embodied task planning](#435-embodied-task-planning). 
 
 ![Embodied Tasks](./Embodied_Tasks.png)
 
@@ -111,14 +111,14 @@ pip install -r requirements.txt
 
 We provides an example of a Vision-Language Navigation (VLN) task implementation. 
 
-**Files and Directories**
+##### Files and Directories
 
 - **Code**: The main code for the VLN task is located in [embodied_vln.py](./embodied_vln.py).
 - **Dataset**: The corresponding dataset files are located in:
   - [Datasets/vln/start_loc.txt](./Datasets/vln/start_loc.txt) - Defines the starting locations and instructions for each VLN task sample.
   - [Datasets/vln/label](./Datasets/vln/label) - Contains the ground truth trajectories.
 
-**Usage**
+##### Usage
 
 In `embodied_vln.py`, the `VLN_evaluator` class is defined. You need to provide the dataset path, the model to be evaluated, and the corresponding API key.
 
