@@ -85,7 +85,7 @@ Please download and install the full embodiedcity simulator.
 
 In the Embodied City, we define five key embodied tasks that reflect three essential human-like abilities for intelligent agents in an open world: perception, reasoning, and decision-making. For perception, we focus on the task of [embodied first-view scene understanding](#431-embodied-first-view-scene-understanding); for reasoning, we address [embodied question answering](#432-embodied-question-answering) and [dialogue](#433-embodied-dialogue); and for decision-making, we include [embodied action (visual-language navigation)](#434-embodied-action-vision-and-language-navigation) and [embodied task planning](#435-embodied-task-planning). 
 
-![Embodied Tasks](./Embodied_Tasks.png)
+![Embodied Tasks](./Benchmark.png)
 
 
 #### 4.1 Environment
