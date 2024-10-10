@@ -43,7 +43,7 @@ pip install embodiedcity
 ```python
 from embodiedcity import DroneClient, ImageType, CameraID
 
-base_url = "https://embodied-city.fiblab.net"
+base_url = "https://embodied-ai.city"
 drone_id = "xxx"
 token = "xxxxxxxx"
 client = DroneClient(base_url, drone_id, token)
