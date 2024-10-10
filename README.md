@@ -23,10 +23,10 @@ Other elements include street furniture🚸 (benches, streetlights, signs) , veg
 
 ##  3 <a name='Usage'></a> Usage 🔑
 
-We provide [a simple Python SDK](https://github.com/tsinghua-fib-lab/embodied-city-python-sdk) to interact with the Embodied City API. Users can easily achieve perception and control of drone agents through the following functions. When the command is issued via the API, changes in the agent's first-person view will be observed in the **Console**.
+We provide a simple Python SDK to interact with the Embodied City API. Users can easily achieve perception and control of drone agents through the following functions. When the command is issued via the API, changes in the agent's first-person view will be observed in the **Console**.
 
 #### 3.1 Acquire ID and token
-Before using the SDK, you need to acquire a agent and obtain its token signing up at [Embodied City](https://embodied-city.fiblab.net). In the website, you should go to the **Console** page, choose an available drone, and click on the **Acquire** button.
+Before using the SDK, you need to acquire a agent and obtain its token signing up at [Embodied City](https://embodied-ai.city). In the website, you should go to the **Console** page, choose an available drone, and click on the **Acquire** button.
 
 ❗️The token is a secret key that should not be shared with anyone.
 
