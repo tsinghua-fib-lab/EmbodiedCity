@@ -3,7 +3,7 @@
 
 ##  1 <a name='Introduction'></a> Introduction 🌟
 
-Embodied intelligence is considered one of the most promising directions for artificial general intelligence, with human-like abilities interacting with the world. However, most works focus on bounded indoor environments, with limited literature on open-world scenarios. To address this, we release a new benchmark platform, named [Embodied City](https://embodied-city.fiblab.net), for embodied intelligence in urban environments. This platform includes a simulator and datasets on representative tasks for embodied intelligence in an urban environment. You can either request the API key to access the online deployed environment, or download it to deploy in your own server.
+Embodied intelligence is considered one of the most promising directions for artificial general intelligence, with human-like abilities interacting with the world. However, most works focus on bounded indoor environments, with limited literature on open-world scenarios. To address this, we release a new benchmark platform, named [Embodied City](https://embodied-ai.city), for embodied intelligence in urban environments. This platform includes a simulator and datasets on representative tasks for embodied intelligence in an urban environment. You can either request the API key to access the online deployed environment, or download it to deploy in your own server.
 
 ![](Simulator.png)
 
