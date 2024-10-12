@@ -3,7 +3,7 @@
 
 ##  1 <a name='Introduction'></a> Introduction 🌟
 
-Embodied intelligence is considered one of the most promising directions for artificial general intelligence, with human-like abilities interacting with the world. However, most works focus on bounded indoor environments, with limited literature on open-world scenarios. To address this, we release a new benchmark platform, named [Embodied City](https://embodied-ai.city), for embodied intelligence in urban environments. This platform includes a simulator and datasets on representative tasks for embodied intelligence in an urban environment. You can either request the API key to access the online deployed environment, or download it to deploy in your own server.
+Embodied intelligence is considered one of the most promising directions for artificial general intelligence, with human-like abilities interacting with the world. However, most works focus on bounded indoor environments, with limited literature on open-world scenarios. To address this, we release a new benchmark platform, named [Embodied City](https://embodied-ai.city), for embodied intelligence in urban environments. This platform includes a simulator and datasets on representative tasks for embodied intelligence in an urban environment. You can either request the API key to access the online deployed environment, or download it to deploy in your own server. We provide a detailed introduction to the platform in a [preprint](./EmbodiedCity.pdf).
 
 ![](Simulator.png)
 
@@ -81,7 +81,7 @@ It is possible that the drone collided with a building. Try issuing a command to
 
 Please download and install the full embodiedcity simulator.
 
-##  4 <a name='Tasks'></a> Embodied Tasks 📋 
+##  4 <a name='Tasks'></a> Embodied Tasks 📋
 
 In the Embodied City, we define five key embodied tasks that reflect three essential human-like abilities for intelligent agents in an open world: perception, reasoning, and decision-making. For perception, we focus on the task of [embodied first-view scene understanding](#431-embodied-first-view-scene-understanding); for reasoning, we address [embodied question answering](#432-embodied-question-answering) and [dialogue](#433-embodied-dialogue); and for decision-making, we include [embodied action (visual-language navigation)](#434-embodied-action-vision-and-language-navigation) and [embodied task planning](#435-embodied-task-planning). 
 
@@ -226,3 +226,16 @@ The decision-making in the real world does not have explicit instructions; other
 * I want to have a cup of coffee at ALL-Star coffee shop, but I have not brought any money. What should I do? Please give a chain-like plan.
 * I need to get an emergency medicine from the pharmacy, but I do not know the way. What should I do? Please give a chain-like plan.
 * I lost my wallet nearby, and now I need to find it. What should I do? Please give a chain-like plan.
+
+##  5 <a name='Citation'></a> Citation 📝
+
+Please cite our paper if you find EmbodiedCity helpful in your research.
+
+```
+@article{gao2024embodied,
+  title={EmbodiedCity: A Benchmark Platform for Embodied Agent in Real-world City Environment},
+  author={Gao, Chen and Zhao, Baining and Zhang, Weichen and Zhang, Jun and Mao, Jinzhu and Zheng, Zhiheng and Man, Fanhang and Fang, Jianjie and Zhou, Zile and Cui, Jinqiang and Chen, Xinlei and Li, Yong},
+  journal={arXiv preprint},
+  year={2024}
+}
+```
