@@ -227,7 +227,12 @@ The decision-making in the real world does not have explicit instructions; other
 * I need to get an emergency medicine from the pharmacy, but I do not know the way. What should I do? Please give a chain-like plan.
 * I lost my wallet nearby, and now I need to find it. What should I do? Please give a chain-like plan.
 
-##  5 <a name='Citation'></a> Citation 📝
+##  5 <a name='Download'></a> Offline Simulation Environment Download 📝
+
+Users can download the offline simulation environment for local deployment to train and test agents. The platform provides versions compatible with Windows, Linux, macOS, and other operating systems, enabling quick deployment and testing.
+For download links, please contact: [chgao96@tsinghua.edu.cn](mailto:chgao96@tsinghua.edu.cn)
+
+##  6 <a name='Citation'></a> Citation 📝
 
 Please cite our paper if you find EmbodiedCity helpful in your research.
 
