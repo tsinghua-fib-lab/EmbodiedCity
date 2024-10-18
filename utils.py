@@ -30,6 +30,7 @@ from pycocoevalcap.rouge.rouge import Rouge
 from pycocoevalcap.spice.spice import Spice
 from scipy.stats import bootstrap
 import nltk
+from sentence_transformers import SentenceTransformer, util
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from rouge_score import rouge_scorer
@@ -610,12 +611,14 @@ def evaluate_texts(groundtruth, df1):
     meteor_scores = []
     rouge_scores = []
     exact_match_scores = []
+    sbert_scores = []
     # spice_scores = []
 
-    # Initialize CIDEr, ROUGE, and SPICE scorers
+    # Initialize CIDEr, ROUGE, SPICE scorers and Sentence-BERT
     cider_scorer = Cider()
     rouge = rouge_scorer.RougeScorer(['rougeL'], use_stemmer=True)
     # spice_scorer = Spice()
+    sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
 
     for gt, pred in zip(groundtruth, df1):
         try:
@@ -671,6 +674,14 @@ def evaluate_texts(groundtruth, df1):
         # Calculate Exact Match
         exact_match_scores.append(1 if (gt[0] == pred or gt[1] == pred) else 0)
 
+        # Calculate Sentence-BERT score
+        gt_sentences = [' '.join(k) for k in reference]
+        pred_sentence = ' '.join(candidate)
+        gt_embeddings = sbert_model.encode(gt_sentences, convert_to_tensor=True)
+        pred_embedding = sbert_model.encode(pred_sentence, convert_to_tensor=True)
+        sb_score = util.pytorch_cos_sim(gt_embeddings, pred_embedding)
+        sbert_scores.append(sb_score.max().item()) 
+
         # Convert lists to numpy arrays for easier statistical calculations
     scores = {
         'CIDEr': np.array(cider_scores),
@@ -681,6 +692,7 @@ def evaluate_texts(groundtruth, df1):
         'METEOR': np.array(meteor_scores),
         'ROUGE': np.array(rouge_scores),
         'Exact Match': np.array(exact_match_scores),
+        'Sentence-BERT': np.array(sbert_scores),
     }
 
     # Calculate mean, 2.5% percentile, and 97.5% percentile for each score
