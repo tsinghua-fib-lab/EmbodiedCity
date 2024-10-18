@@ -24,7 +24,7 @@ The streets are modeled to include all necessary components such as lanes🛣️
 Other elements include street furniture🚸 (benches, streetlights, signs) , vegetation🌳 (trees, shrubs, lawns), and urban amenities🚉 (bus stops, metro-entrances, public restrooms). These are also created using Blender, based on real-world references from the street view services mentioned above. Additionally, dynamic elements like vehicles🚗 and pedestrians🚶 are simulated to move realistically within the environment, contributing to the liveliness and accuracy of the urban simulation. The simulation algorithms of vehicles and pedestrians are based on [Mirage Simulation System](https://dl.acm.org/doi/pdf/10.1145/3557915.3560950).
 
 
-##  3 <a name='Usage'></a> Usage 🔑
+##  3 <a name='Usage'></a> Online Usage 🔑
 
 We provide a simple Python SDK to interact with the Embodied City API. Users can easily achieve perception and control of drone agents through the following functions. When the command is issued via the API, changes in the agent's first-person view will be observed in the **Console**.
 
@@ -93,7 +93,8 @@ In the Embodied City, we define five key embodied tasks that reflect three essen
 
 #### 4.1 Environment
 
-Download and extract the full embodiedcity simulator. 
+Download and extract the full embodiedcity simulator of offline version. Users can download the offline simulation environment for local deployment to train and test agents. The platform provides versions compatible with Windows, Linux, macOS, and other operating systems, enabling quick deployment and testing.
+For download links, please contact: [chgao96@tsinghua.edu.cn](mailto:chgao96@tsinghua.edu.cn)
 
 ```bash
 conda env create -n EmbodiedCity -f environment.yml
@@ -230,12 +231,8 @@ The decision-making in the real world does not have explicit instructions; other
 * I need to get an emergency medicine from the pharmacy, but I do not know the way. What should I do? Please give a chain-like plan.
 * I lost my wallet nearby, and now I need to find it. What should I do? Please give a chain-like plan.
 
-##  5 <a name='Download'></a> Offline Simulation Environment Download ⏬
 
-Users can download the offline simulation environment for local deployment to train and test agents. The platform provides versions compatible with Windows, Linux, macOS, and other operating systems, enabling quick deployment and testing.
-For download links, please contact: [chgao96@tsinghua.edu.cn](mailto:chgao96@tsinghua.edu.cn)
-
-##  6 <a name='Citation'></a> Citation 📝
+##  5 <a name='Citation'></a> Citation 📝
 
 Please cite our paper if you find EmbodiedCity helpful in your research.
 
