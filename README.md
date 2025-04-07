@@ -94,7 +94,7 @@ In the Embodied City, we define five key embodied tasks that reflect three essen
 #### 4.1 Environment
 
 Download and extract the full embodiedcity simulator of offline version. Users can download the offline simulation environment for local deployment to train and test agents. The platform provides versions compatible with Windows, Linux, macOS, and other operating systems, enabling quick deployment and testing.
-For download links, please contact: [chgao96@tsinghua.edu.cn](mailto:chgao96@tsinghua.edu.cn)
+For download links, please contact: [embodiedcity@163.com](mailto:embodiedcity@163.com)
 
 ```bash
 conda env create -n EmbodiedCity -f environment.yml
