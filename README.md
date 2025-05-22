@@ -2,6 +2,7 @@
 
 ##  <a name='Introduction'></a> News 🎉
 
+[2025.05.22] The simulator can be downloaded from: [link](https://huggingface.co/datasets/EmbodiedCity/EmbodiedCity-Simulator).
 [2024.10.12] We release the full paper on arXiv: [link](https://arxiv.org/abs/2410.09604).
 
 ##  1 <a name='Introduction'></a> Introduction 🌟
@@ -93,8 +94,8 @@ In the Embodied City, we define five key embodied tasks that reflect three essen
 
 #### 4.1 Environment
 
-Download and extract the full embodiedcity simulator of offline version. Users can download the offline simulation environment for local deployment to train and test agents. The platform provides versions compatible with Windows, Linux, macOS, and other operating systems, enabling quick deployment and testing.
-For download links, please contact: [embodiedcity@163.com](mailto:embodiedcity@163.com)
+Download and extract the full embodiedcity simulator of offline version. Users can download the offline simulation environment for local deployment to train and test agents. The platform provides versions compatible with Windows system, enabling quick deployment and testing.
+For download links, please refer to: [link](https://huggingface.co/datasets/EmbodiedCity/EmbodiedCity-Simulator)
 
 ```bash
 conda env create -n EmbodiedCity -f environment.yml
