@@ -3,6 +3,7 @@
 ##  <a name='Introduction'></a> News 🎉
 
 [2025.05.22] The simulator can be downloaded from: [link](https://huggingface.co/datasets/EmbodiedCity/EmbodiedCity-Simulator).
+
 [2024.10.12] We release the full paper on arXiv: [link](https://arxiv.org/abs/2410.09604).
 
 ##  1 <a name='Introduction'></a> Introduction 🌟
@@ -24,7 +25,7 @@ The streets are modeled to include all necessary components such as lanes🛣️
 
 Other elements include street furniture🚸 (benches, streetlights, signs) , vegetation🌳 (trees, shrubs, lawns), and urban amenities🚉 (bus stops, metro-entrances, public restrooms). These are also created using Blender, based on real-world references from the street view services mentioned above. Additionally, dynamic elements like vehicles🚗 and pedestrians🚶 are simulated to move realistically within the environment, contributing to the liveliness and accuracy of the urban simulation. The simulation algorithms of vehicles and pedestrians are based on [Mirage Simulation System](https://dl.acm.org/doi/pdf/10.1145/3557915.3560950).
 
-
+<!--
 ##  3 <a name='Usage'></a> Online Usage 🔑
 
 We provide a simple Python SDK to interact with the Embodied City API. Users can easily achieve perception and control of drone agents through the following functions. When the command is issued via the API, changes in the agent's first-person view will be observed in the **Console**.
@@ -231,9 +232,82 @@ The decision-making in the real world does not have explicit instructions; other
 * I want to have a cup of coffee at ALL-Star coffee shop, but I have not brought any money. What should I do? Please give a chain-like plan.
 * I need to get an emergency medicine from the pharmacy, but I do not know the way. What should I do? Please give a chain-like plan.
 * I lost my wallet nearby, and now I need to find it. What should I do? Please give a chain-like plan.
+-->
+
+##  3 <a name='Tasks'></a> Embodied Task 📋
 
 
-##  5 <a name='Citation'></a> Citation 📝
+#### 3.1 Environment
+
+Download and extract the full embodiedcity simulator of offline version. Users can download the offline simulation environment for local deployment to train and test agents. The platform provides versions compatible with Windows system, enabling quick deployment and testing.
+
+**For download links, please refer to: [link](https://huggingface.co/datasets/EmbodiedCity/EmbodiedCity-Simulator)**
+
+```bash
+conda env create -n EmbodiedCity -f environment.yml
+conda activate EmbodiedCity
+```
+
+or
+
+```bash
+conda create -n EmbodiedCity python=3.10
+conda activate EmbodiedCity
+pip install -r requirements.txt
+```
+
+#### 3.2 Running
+
+
+We provides an example of a Vision-Language Navigation (VLN) task implementation. 
+
+##### Files and Directories
+
+- **Code**: The main code for the VLN task is located in [embodied_vln.py](./embodied_vln.py).
+- **Dataset**: The corresponding dataset files are located in:
+  - [Datasets/vln/start_loc.txt](./Datasets/vln/start_loc.txt) - Defines the starting locations and instructions for each VLN task sample.
+  - [Datasets/vln/label](./Datasets/vln/label) - Contains the ground truth trajectories.
+
+##### Usage
+
+In `embodied_vln.py`, the `VLN_evaluator` class is defined. You need to provide the dataset path, the model to be evaluated, and the corresponding API key.
+
+###### Set up model and API key:
+
+```python
+model = "xxxxx"  # LM models, e.g., "claude-3-haiku-20240307", "gpt-4o"
+api_key = "xxxxxxxxx"  # Fill in your API key
+```
+
+###### Initialize the VLN evaluator:
+
+```python
+vln_eval = VLN_evaluator("dataset/vln", model, api_key)
+```
+
+###### Run the evaluation:
+
+```python
+vln_eval.evaluation()
+```
+
+We support multimodal models from OpenAI and Claude. If you wish to use a custom model, you can modify the `LM_VLN` class in `utils.py`.
+
+
+The evaluation process will activate the simulator's drone, running through each VLN task sample. The performance of the model will be quantified using the following three metrics:
+- **Success Rate (SR)** measures the proportion of navigation episodes where the agent successfully reaches the target location within a specified margin of error
+- **SPL (Success weighted by Path Length)** is a metric that considers both the success rate and the efficiency of the path taken by the agent. It accounts for how closely the agent's path length matches the optimal path length.
+- **Navigation Error (NE)** measures the average distance from the agent's final location to the target destination.
+
+
+
+#### 3.3 Task Definition
+
+Embodied Action, often referred to as Vision-and-Language Navigation (VLN), is a research area in artificial intelligence that focuses on enabling an agent to navigate an environment based on natural language instructions. The **input** combines visual perception and natural language instructions to guide the agent through complex environments. The **output** is the action sequences following the language instructions.
+
+
+
+##  4 <a name='Citation'></a> Citation 📝
 
 Please cite our paper if you find EmbodiedCity helpful in your research.
 
