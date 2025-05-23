@@ -241,7 +241,9 @@ The decision-making in the real world does not have explicit instructions; other
 
 Download and extract the full embodiedcity simulator of offline version. Users can download the offline simulation environment for local deployment to train and test agents. The platform provides versions compatible with Windows system, enabling quick deployment and testing.
 
-**For download links, please refer to: [link](https://huggingface.co/datasets/EmbodiedCity/EmbodiedCity-Simulator)**
+**For simulator download links, please refer to: [link](https://huggingface.co/datasets/EmbodiedCity/EmbodiedCity-Simulator)**
+
+Then the Python environment can be installed as follows:
 
 ```bash
 conda env create -n EmbodiedCity -f environment.yml
@@ -255,6 +257,30 @@ conda create -n EmbodiedCity python=3.10
 conda activate EmbodiedCity
 pip install -r requirements.txt
 ```
+
+
+To verify the environment setup for AirSim, please follow the steps below:
+
+**Set AirSim to 'Multirotor' Mode**: Open the AirSim settings file (`settings.json`) and ensure that the `SimMode` is set to `'Multirotor'`. For example:
+   ```json
+   {
+       "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
+       "SettingsVersion": 1.2,
+       "SimMode": "Multirotor"
+   }
+   ```
+
+**Run the Test Script**: Execute the `airsim_test.py` script provided in this folder. You can run the script using the following command:
+   ```bash
+   python airsim_test.py
+   ```
+
+**Verify the Output**: If the environment is configured correctly:
+   - You should observe the drone taking off and flying upward in the AirSim simulation.
+   - The script will capture RGB observations from the drone's front-facing camera.
+   - The captured images will be saved in the current folder.
+
+If all the above steps work as expected, your AirSim environment is successfully configured.
 
 #### 3.2 Running
 
