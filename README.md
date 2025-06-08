@@ -308,7 +308,7 @@ api_key = "xxxxxxxxx"  # Fill in your API key
 ###### Initialize the VLN evaluator:
 
 ```python
-vln_eval = VLN_evaluator("dataset/vln", model, api_key)
+vln_eval = VLN_evaluator("Datasets/vln", model, api_key)
 ```
 
 ###### Run the evaluation:
