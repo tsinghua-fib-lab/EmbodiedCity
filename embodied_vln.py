@@ -214,7 +214,7 @@ if __name__ == "__main__":
     model = "xxxxx"  # LM models, for example: "claude-3-haiku-20240307", "gpt-4o"
     api_key = "xxxxxxxxx"  # Fill in API key
 
-    vln_eval = VLN_evaluator("dataset/vln", model, api_key)
+    vln_eval = VLN_evaluator("Datasets/vln", model, api_key)
     navi_data = vln_eval.navi_tasks
     vln_eval.evaluation()
     # print(navi_data[0])
