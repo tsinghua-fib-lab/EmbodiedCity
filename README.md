@@ -15,15 +15,38 @@ Embodied intelligence is considered one of the most promising directions for art
 
 ##  2 <a name='Simulator'></a> Simulator 🌆
 
+#### 2.1 Introduction
 We construct an environment where the agents🤖 can perceive, reason, and take actions. The basic environment of the simulator includes a large business district in Beijing, one of the biggest city in China, in which we build 3D model for buildings, streets, and other elements, hosted by [Unreal Engine](https://www.unrealengine.com/).
-#### 2.1 Buildings 
+###### 2.1.1 Buildings 
 We first manually use [Blender4](https://www.blender.org/) to create the 3D asserts of the buildings, for which we use the streetview services of [Baidu Map](https://map.baidu.com/) and [Amap](https://amap.com/). The city level detail includes a variety of building types such as office towers🏢, shopping malls🏬, residential complexes🏠, and public facilities🏫. These models are textured and detailed to closely resemble their real-world counterparts to enhance realism in the simulation.
-#### 2.2 Streets 
+###### 2.1.2 Streets 
 The streets are modeled to include all necessary components such as lanes🛣️, intersections❌, traffic signals🚦, and road markings⬆️. We also incorporate pedestrian pathways, cycling lanes, and parking areas. Data from traffic monitoring systems and mapping services help ensure that the street layout and traffic flow patterns are accurate and realistic.
 
-#### 2.3 Other Elements 
+###### 2.1.3 Other Elements 
 
 Other elements include street furniture🚸 (benches, streetlights, signs) , vegetation🌳 (trees, shrubs, lawns), and urban amenities🚉 (bus stops, metro-entrances, public restrooms). These are also created using Blender, based on real-world references from the street view services mentioned above. Additionally, dynamic elements like vehicles🚗 and pedestrians🚶 are simulated to move realistically within the environment, contributing to the liveliness and accuracy of the urban simulation. The simulation algorithms of vehicles and pedestrians are based on [Mirage Simulation System](https://dl.acm.org/doi/pdf/10.1145/3557915.3560950).
+
+#### 2.2 Manual Control
+`keyboard_control.py` allows you to control the drone using a keyboard. To use it, ensure the pop-up window is in focus and the input method is set to English. The key mappings are as follows:
+
+- ↑: Move forward  
+- ↓: Move backward  
+- ←: Move left  
+- →: Move right  
+- W: Move up  
+- S: Move down  
+- A: Rotate left  
+- D: Rotate right  
+
+This script can be combined with other AirSim functions to achieve additional capabilities.
+
+#### 2.3 Starting Position
+You can use AirSim's `simSetVehiclePose` function to teleport the vehicle to a meaningful starting position. The following command demonstrates this:
+
+```python
+target_position = airsim.Vector3r(7481.66602, -3555.18677, -53.36726)
+client.simSetVehiclePose(airsim.Pose(target_position, airsim.Quaternionr(0, 0, 0, 1)), True)
+```
 
 <!--
 ##  3 <a name='Usage'></a> Online Usage 🔑
